@@ -9,7 +9,9 @@ function App() {
     <>
       <NavbarComponent/>
       <br></br>
-      <ItemListContainer precio={"$5.00"}/>
+      <div className='container'>
+        <ItemListContainer precio={"$5.00"} nombreproducto={"Producto 1"}/>
+      </div>
     </>
   )
 }
