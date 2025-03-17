@@ -7,8 +7,8 @@ const ItemList = ({data}) => {
             {/*{data.map((producto)=><Item key={producto.id} producto={producto}/>)}*/}
             {
                 data.map((producto)=>(
-                    <div className='col-lg-3'>
-                        <Item key={producto.id} producto={producto}/>
+                    <div key={producto.id} className='col-lg-3'>
+                        <Item  producto={producto}/>
                         <br />
                     </div>
                     

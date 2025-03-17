@@ -1,5 +1,6 @@
 import React from "react"
 import { NumericFormat } from "react-number-format"
+import { Link } from "react-router-dom"
 
 const Item = ({producto}) => {
     return(
@@ -19,8 +20,8 @@ const Item = ({producto}) => {
                     <img src={producto.img} className="img-fluid" alt={producto.nombre}></img>
                     <div className="card-body">
                         <h5 className="card-title">{producto.nombre}</h5>                    
-                        <p className="card-text"><NumericFormat value={producto.precio.toFixed(2)} displayType={'text'} thousandSeparator={true} prefix={'$'}></NumericFormat></p>
-                        <a href="#" className="btn btn-primary">Detalles</a>
+                        <p className="card-text"><NumericFormat value={producto.precio} displayType={'text'} thousandSeparator={true} prefix={'$'}></NumericFormat></p>
+                        <Link className="btn btn-primary" to={`/product/${producto.id}`}>Detalle</Link>
                     </div>
                 </div>
     )

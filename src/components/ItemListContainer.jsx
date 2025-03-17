@@ -18,7 +18,7 @@ const ItemListContainer = ({greeting}) => {
 
     },[])
     return(
-            <div>
+            <div className="container">
                 <h1 className="text-light">{greeting}</h1>
                 {loading ?  <ItemLoading/> : <ItemList data={data}/>}
                 {/*loading ?  <p>Cargando...</p> : <ItemList data={data}/>*/}

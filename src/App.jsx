@@ -2,20 +2,25 @@ import 'bootstrap/dist/css/bootstrap.css'
 import './App.css'
 import NavbarComponent from './components/NavbarComponent'
 import ItemListContainer from './components/ItemListContainer'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import ItemDetailContainer from './components/ItemDetailContainer'
 
 function App() {
 
   return (
     <>
-      <NavbarComponent/>
+    <BrowserRouter>
+    <NavbarComponent/>
+    <Routes>
+      <Route path='/' element={<ItemListContainer greeting="Bienvenidos"/>}/>
+      <Route path='/category/:categoryId' element={<ItemListContainer greeting="Bienvenidos"/>}/>
+      <Route path='/product/:id' element={<ItemDetailContainer/>}/>
+    </Routes>
+    </BrowserRouter>
+    
       <br></br>
-      <div className='container'>
-        <ItemListContainer greeting="Bienvenidos"/>
-        {/*<div className="d-flex align-items-center">
-          <strong role="status">Loading...</strong>
-          <div className="spinner-border ms-auto" aria-hidden="true"></div>
-        </div>*/}
-      </div>
+      
+      
     </>
   )
 }
