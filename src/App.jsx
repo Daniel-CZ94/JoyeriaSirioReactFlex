@@ -10,7 +10,11 @@ function App() {
       <NavbarComponent/>
       <br></br>
       <div className='container'>
-        <ItemListContainer precio={"$5.00"} nombreproducto={"Producto 1"}/>
+        <ItemListContainer greeting="Bienvenidos"/>
+        {/*<div className="d-flex align-items-center">
+          <strong role="status">Loading...</strong>
+          <div className="spinner-border ms-auto" aria-hidden="true"></div>
+        </div>*/}
       </div>
     </>
   )

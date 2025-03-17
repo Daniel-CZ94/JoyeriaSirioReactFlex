@@ -1,11 +1,28 @@
-const ItemListContainer = (props) => {
+import { useEffect } from "react"
+import { useState } from "react"
+import { getProducts } from "../mock/asyncData"
+import ItemList from "./ItemList"
+import ItemLoading from "./ItemLoading"
+
+const ItemListContainer = ({greeting}) => {
+    const [data,setData] = useState([])
+    const [loading,setLoading] = useState(false)
+    useEffect(()=>{
+        setLoading(true)
+        getProducts()
+        .then((res)=>{
+            setData(res)
+        })
+        .catch((error)=>console.log(error))
+        .finally(()=>setLoading(false))
+
+    },[])
     return(
-        <div className="col-lg-3">
-            <h3>{props.nombreproducto}</h3>
-            <img src="./product1.png" alt={props.nombreproducto} className="img-fluid"></img>
-            <p>{props.precio}</p>
-        </div>
-        
+            <div>
+                <h1 className="text-light">{greeting}</h1>
+                {loading ?  <ItemLoading/> : <ItemList data={data}/>}
+                {/*loading ?  <p>Cargando...</p> : <ItemList data={data}/>*/}
+            </div>
     )
 }
 export default ItemListContainer
