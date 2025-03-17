@@ -11,7 +11,7 @@ const ItemDetail = ({product}) => {
             
         </div>*/
         <div className="row" style={{justifyContent: "center",alignItems: "center"}}>
-            <div className="col-lg-6">
+            <div className="col-lg-5">
                         <div className="card">
                             <img className="card-img-top" alt={product.nombre} src={product.img}/>
                             <div className="card-body">

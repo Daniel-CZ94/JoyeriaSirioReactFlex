@@ -3,7 +3,7 @@ import CartWidgetComponent from "./CartWidgetComponent"
 
 const NavbarComponent = () => {
     return(
-        <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-fixed-top">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-fixed-top sticky-top">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
                     <img src="./logosirio.png" alt="Logo" width={40} height={40} className="d-inline-block align-text-top"></img>
