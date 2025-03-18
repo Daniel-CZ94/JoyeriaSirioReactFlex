@@ -1,6 +1,10 @@
 import React from "react"
 import { NumericFormat } from "react-number-format"
+import ItemCounter from "./ItemCounter"
 const ItemDetail = ({product}) => {
+    const onAdd = (quantity) =>{
+        alert(`Agregaste ${quantity} unidades`)
+    }
     return (
         /*<div>
             <h1>Detalle del producto: {product.nombre}</h1>
@@ -19,6 +23,7 @@ const ItemDetail = ({product}) => {
                                 <p className="card-text"><em>{product.descripcion}</em></p>
                                 <p className="card-text">Existencias: {product.stock}</p>
                                 <p className="card-text">Precio: <NumericFormat value={product.precio} displayType={'text'} thousandSeparator={true} prefix={'$'} decimalSeparator="." decimalScale={2}></NumericFormat></p>
+                                <ItemCounter stock={product.stock} onAdd={onAdd} />
                             </div>
                         </div>
                     </div>
