@@ -16,7 +16,7 @@ const Item = ({producto}) => {
                 </div>
             </div>
         </div>*/
-        <div className="card">
+            <div className="card">
                     <img src={producto.img} className="img-fluid" alt={producto.nombre}></img>
                     <div className="card-body">
                         <h5 className="card-title">{producto.nombre}</h5>                    

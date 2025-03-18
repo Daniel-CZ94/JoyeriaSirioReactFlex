@@ -26,6 +26,7 @@ const ItemListContainer = ({greeting}) => {
     return(
             <div className="container">
                 {category ? <h1 className="text-light">Mostrando la categoria: {category}</h1> : <h1 className="text-light">{greeting}</h1>}
+                <br></br>
                 {loading ?  <ItemLoading/> : data.length > 0 ? <ItemList data={data}/> : <div className="alert alert-warning" role="alert">No hay datos que mostrar</div> }
                 {/*loading ?  <p>Cargando...</p> : <ItemList data={data}/>*/}
             </div>

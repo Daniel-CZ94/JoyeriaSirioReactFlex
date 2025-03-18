@@ -170,6 +170,15 @@ const productos = [
         precio:6500,
         img:"https://shop.fonelli.com/cdn/shop/files/S81606145_4100x.jpg"
     },
+    {
+        id:"0034",
+        nombre:"Pulsera de Oro Amarillo de 14k Cartier 1x1 1mm",
+        descripcion:"Pulsera de Oro Amarillo de 14k Cartier 1x1 eslavon largo",
+        categoria:"Pulseras",
+        stock:0,
+        precio:8500,
+        img:"https://shop.fonelli.com/cdn/shop/files/CADH46_2p_4100x.jpg"
+    },
 ]
 export const getProducts = ()=>{
     return new Promise((resolve,reject) =>{
