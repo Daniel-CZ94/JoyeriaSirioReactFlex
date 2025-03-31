@@ -32,7 +32,7 @@ const NavbarComponent = () => {
                             <NavLink className="nav-link" to="/category/relojes">Relojes</NavLink>
                         </li>
                     </ul>
-                    <CartWidgetComponent/>
+                    <NavLink to='/cart'><CartWidgetComponent/></NavLink>
                 </div>
             </div>
         </nav>

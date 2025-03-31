@@ -6,7 +6,7 @@ import CartEmpty from "./CartEmpty"
 const CartContainer = () =>{
     const {cart} = useCart()
     return(
-        <div>
+        <div className="container">
             {
                 cart.length ? <CartView/> : <CartEmpty/>
             }

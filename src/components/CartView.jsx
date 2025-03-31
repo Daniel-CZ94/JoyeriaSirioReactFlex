@@ -1,10 +1,13 @@
-import React from "react"
-import {} from '../context/CartContext'
+import React, { use } from "react"
+import { useCart } from '../context/CartContext'
 
 
 const CartView = () => {
+    const {cart} = useCart()
     return(
-        <h1>Cartview</h1>
+        <ul>
+            {cart.map((compra)=> <li>{compra.nombre}</li>)}
+        </ul>
     )
 }
 export default CartView

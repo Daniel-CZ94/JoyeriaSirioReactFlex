@@ -1,19 +1,14 @@
-import React from "react"
+import React, { useContext,useState } from "react"
 import { NumericFormat } from "react-number-format"
 import ItemCounter from "./ItemCounter"
+import { CartContext } from '../context/CartContext'
 const ItemDetail = ({product}) => {
+    const {addItem} = useContext(CartContext)
+
     const onAdd = (quantity) =>{
-        alert(`Agregaste ${quantity} unidades`)
+        addItem(product,quantity)
     }
     return (
-        /*<div>
-            <h1>Detalle del producto: {product.nombre}</h1>
-            <img src={product.img} alt={product.nombre}/>
-            <p>{product.descripcion}</p>
-            <p>Existencias: {product.stock}</p>
-            <p>Precio: <NumericFormat value={product.precio} displayType={'text'} thousandSeparator={true} prefix={'$'} decimalSeparator="." decimalScale={2}></NumericFormat></p>
-            
-        </div>*/
         <div className="row" style={{justifyContent: "center",alignItems: "center"}}>
             <div className="col-lg-5">
                         <div className="card">
