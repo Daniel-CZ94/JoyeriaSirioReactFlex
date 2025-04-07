@@ -6,9 +6,28 @@ export const CartProvider = ({children}) => {
     const [cart,setCart] = useState([])
 
     const addItem = (item,quantity) => {
-        setCart([...cart,{...item,quantity}])
+        if(existsInCart(item.id)){
+            const updateCart = cart.map((prod)=>{
+                if(prod.id === item.id){
+                    let amount = prod.quantity + quantity;
+                    if(amount < prod.stock){
+                        return {...prod,quantity: amount}
+                    }else{
+                        console.log("La cantidad supera el stock")
+                        return {...prod,quantity: prod.stock}                        
+                    }
+                    
+                }else{
+                    return prod
+                }
+            })
+            setCart(updateCart)            
+        }else{
+            setCart([...cart,{...item,quantity}])
+        }
+        
         //cart.map((compra)=> console.log(compra))
-        printCart(cart)
+        //printCart(cart)
     }
     const clearCart = () => {
         setCart([])
@@ -29,7 +48,8 @@ export const CartProvider = ({children}) => {
         return total;*/
     }
     const totalItems = () => {
-        return cart.reduce((acc,prod) => acc += prod.quantity,0)
+        //return cart.reduce((acc,prod) => acc += prod.quantity,0)
+        return cart.length
     }
     const decreaseQuantityItem = (id) =>{
         const updateDecrease = cart.map((prod)=>{
@@ -54,6 +74,9 @@ export const CartProvider = ({children}) => {
     const printCart = arr => arr.forEach(element => {
         console.log(element)
     });
+    const existsInCart = (id) => {
+        return cart.some((prod) => prod.id === id)
+    }
     return(
         <CartContext.Provider value={{cart,addItem,clearCart,removeItem,totalCart,totalItems,inCartExists,decreaseQuantityItem,incrementQuantityItem}}>
             {children}
