@@ -7,6 +7,7 @@ const ItemDetail = ({product}) => {
 
     const onAdd = (quantity) =>{
         addItem(product,quantity)
+        console.log(product)
     }
     return (
         <div className="row" style={{justifyContent: "center",alignItems: "center"}}>

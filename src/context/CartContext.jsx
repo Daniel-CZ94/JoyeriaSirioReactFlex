@@ -8,7 +8,7 @@ export const CartProvider = ({children}) => {
     const addItem = (item,quantity) => {
         setCart([...cart,{...item,quantity}])
         //cart.map((compra)=> console.log(compra))
-        console.log(cart.length)
+        printCart(cart)
     }
     const clearCart = () => {
         setCart([])
@@ -20,13 +20,42 @@ export const CartProvider = ({children}) => {
         return cart.some((prod) = prod.id === id)
     }
     const totalCart = () => {
-        return cart.reduce((acc,prod) => (acc += prod.price * prod.quantity),0)
+        //console.log(cart.reduce((acc,prod) => (acc += prod.precio * prod.quantity),0))
+        return cart.reduce((acc,prod) => (acc += prod.precio * prod.quantity),0)
+        /*let  total = 0;
+        for(let i = 0;i<cart.length;i++){
+            console.log(cart[i].quantity)
+        }
+        return total;*/
     }
     const totalItems = () => {
         return cart.reduce((acc,prod) => acc += prod.quantity,0)
     }
+    const decreaseQuantityItem = (id) =>{
+        const updateDecrease = cart.map((prod)=>{
+            if(prod.id === id){
+                return {...prod,quantity: prod.quantity - 1}
+            }else{
+                return prod
+            }
+        })
+        setCart(updateDecrease)
+    }
+    const incrementQuantityItem = (id) =>{
+        const updateIncrement = cart.map((prod)=>{
+            if(prod.id === id){
+                return {...prod,quantity: prod.quantity + 1}
+            }else{
+                return prod
+            }
+        })
+        setCart(updateIncrement)
+    }
+    const printCart = arr => arr.forEach(element => {
+        console.log(element)
+    });
     return(
-        <CartContext.Provider value={{cart,addItem,clearCart,removeItem,totalCart,totalItems,inCartExists}}>
+        <CartContext.Provider value={{cart,addItem,clearCart,removeItem,totalCart,totalItems,inCartExists,decreaseQuantityItem,incrementQuantityItem}}>
             {children}
         </CartContext.Provider>
     )

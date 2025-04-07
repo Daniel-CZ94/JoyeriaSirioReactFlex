@@ -6,7 +6,8 @@ const productos = [
         categoria:"Anillos",
         stock:12,
         precio:4300,
-        img:"https://shop.fonelli.com/cdn/shop/files/S82149211_2.jpg"
+        img:"https://shop.fonelli.com/cdn/shop/files/S82149211_2_4100x.jpg",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/files/S82149211_2_180x.jpg"
     },
     {
         id:"0012",
@@ -15,7 +16,8 @@ const productos = [
         categoria:"Anillos",
         stock:8,
         precio:3490,
-        img:"https://shop.fonelli.com/cdn/shop/files/S82117414_4100x.jpg"
+        img:"https://shop.fonelli.com/cdn/shop/files/S82117414_4100x.jpg",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/files/S82117414_180x.jpg"
     },
     {
         id:"0013",
@@ -24,7 +26,8 @@ const productos = [
         categoria:"Anillos",
         stock:3,
         precio:4560,
-        img:"https://shop.fonelli.com/cdn/shop/files/S82154971_4100x.jpg"
+        img:"https://shop.fonelli.com/cdn/shop/files/S82154971_4100x.jpg",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/files/S82154971_180x.jpg"
     },
     {
         id:"0014",
@@ -33,7 +36,8 @@ const productos = [
         categoria:"Anillos",
         stock:5,
         precio:4000,
-        img:"https://shop.fonelli.com/cdn/shop/files/S82151012_4100x.jpg"
+        img:"https://shop.fonelli.com/cdn/shop/files/S82151012_4100x.jpg",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/files/S82151012_180x.jpg"
     },
     {
         id:"0015",
@@ -42,7 +46,8 @@ const productos = [
         categoria:"Anillos",
         stock:2,
         precio:4000,
-        img:"https://shop.fonelli.com/cdn/shop/files/S82150174_4100x.jpg"
+        img:"https://shop.fonelli.com/cdn/shop/files/S82150174_4100x.jpg",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/files/S82150174_180x.jpg"
     },
     {
         id:"0016",
@@ -51,7 +56,8 @@ const productos = [
         categoria:"Anillos",
         stock:1,
         precio:7800,
-        img:"https://shop.fonelli.com/cdn/shop/files/HJ723_4100x.jpg"
+        img:"https://shop.fonelli.com/cdn/shop/files/HJ723_4100x.jpg",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/files/HJ723_180x.jpg"
     },
     {
         id:"0017",
@@ -60,7 +66,8 @@ const productos = [
         categoria:"Anillos",
         stock:4,
         precio:5050,
-        img:"https://shop.fonelli.com/cdn/shop/files/S82115887_4100x.jpg"
+        img:"https://shop.fonelli.com/cdn/shop/files/S82115887_4100x.jpg",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/files/S82115887_180x.jpg"
     },
     {
         id:"0018",
@@ -69,7 +76,8 @@ const productos = [
         categoria:"Anillos",
         stock:2,
         precio:4000,
-        img:"https://shop.fonelli.com/cdn/shop/files/S82146856_4100x.jpg"
+        img:"https://shop.fonelli.com/cdn/shop/files/S82146856_4100x.jpg",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/files/S82146856_180x.jpg"
     },
     {
         id:"0021",
@@ -78,7 +86,8 @@ const productos = [
         categoria:"Argollas",
         stock:10,
         precio:10300,
-        img:"https://shop.fonelli.com/cdn/shop/files/Argolla_de_Matrimonio_Oro_Amarillo_10k_5mm_AR10-060505_-1_4100x.jpg"
+        img:"https://shop.fonelli.com/cdn/shop/files/Argolla_de_Matrimonio_Oro_Amarillo_10k_5mm_AR10-060505_-1_4100x.jpg",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/files/Argolla_de_Matrimonio_Oro_Amarillo_10k_5mm_AR10-060505_-1_180x.jpg"
     },
     {
         id:"0022",
@@ -87,7 +96,8 @@ const productos = [
         categoria:"Argollas",
         stock:6,
         precio:12800,
-        img:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Amarillo_14K_6mm_Alianza_III_4100x.png"
+        img:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Amarillo_14K_6mm_Alianza_III_4100x.png",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Amarillo_14K_6mm_Alianza_III_180x.png"
     },
     {
         id:"0023",
@@ -96,7 +106,8 @@ const productos = [
         categoria:"Argollas",
         stock:4,
         precio:8050,
-        img:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Amarillo_14K_6mm_AR14-02576H_4100x.png"
+        img:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Amarillo_14K_6mm_AR14-02576H_4100x.png",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Amarillo_14K_6mm_AR14-02576H_180x.png"
     },
     {
         id:"0024",
@@ -105,7 +116,8 @@ const productos = [
         categoria:"Argollas",
         stock:12,
         precio:10250,
-        img:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Amarillo_14k_5mm_Inspiraci_n_4100x.png"
+        img:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Amarillo_14k_5mm_Inspiraci_n_4100x.png",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Amarillo_14k_5mm_Inspiraci_n_180x.png"
     },
     {
         id:"0025",
@@ -114,7 +126,8 @@ const productos = [
         categoria:"Argollas",
         stock:16,
         precio:7400,
-        img:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Amarillo_14k_5mm_Inspiraci_n_4100x.png"
+        img:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Amarillo_14k_5mm_Inspiraci_n_4100x.png",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Amarillo_14k_5mm_Inspiraci_n_180x.png"
     },
     {
         id:"0026",
@@ -123,7 +136,8 @@ const productos = [
         categoria:"Argollas",
         stock:9,
         precio:10300,
-        img:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Florentina_14K_6mm-1_4100x.png"
+        img:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Florentina_14K_6mm-1_4100x.png",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Florentina_14K_6mm-1_180x.png"
     },
     {
         id:"0027",
@@ -132,7 +146,8 @@ const productos = [
         categoria:"Argollas",
         stock:6,
         precio:9649,
-        img:"https://shop.fonelli.com/cdn/shop/files/S79470469_4100x.jpg"
+        img:"https://shop.fonelli.com/cdn/shop/files/S79470469_4100x.jpg",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/files/S79470469_180x.jpg"
     },
     {
         id:"0028",
@@ -141,7 +156,8 @@ const productos = [
         categoria:"Argollas",
         stock:2,
         precio:6600,
-        img:"//shop.fonelli.com/cdn/shop/files/S79445082_4100x.jpg"
+        img:"https://shop.fonelli.com/cdn/shop/files/S79445082_4100x.jpg",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/files/S79445082_180x.jpg"
     },
     {
         id:"0031",
@@ -150,7 +166,8 @@ const productos = [
         categoria:"Pulseras",
         stock:4,
         precio:11900,
-        img:"https://shop.fonelli.com/cdn/shop/files/S81601207_4100x.jpg"
+        img:"https://shop.fonelli.com/cdn/shop/files/S81601207_4100x.jpg",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/files/S81601207_180x.jpg"
     },
     {
         id:"0032",
@@ -159,7 +176,8 @@ const productos = [
         categoria:"Pulseras",
         stock:6,
         precio:10800,
-        img:"https://shop.fonelli.com/cdn/shop/files/S81607936_4100x.jpg"
+        img:"https://shop.fonelli.com/cdn/shop/files/S81607936_4100x.jpg",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/files/S81607936_180x.jpg"
     },
     {
         id:"0033",
@@ -168,7 +186,8 @@ const productos = [
         categoria:"Pulseras",
         stock:8,
         precio:6500,
-        img:"https://shop.fonelli.com/cdn/shop/files/S81606145_4100x.jpg"
+        img:"https://shop.fonelli.com/cdn/shop/files/S81606145_4100x.jpg",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/files/S81606145_180x.jpg"
     },
     {
         id:"0034",
@@ -177,7 +196,8 @@ const productos = [
         categoria:"Pulseras",
         stock:0,
         precio:8500,
-        img:"https://shop.fonelli.com/cdn/shop/files/CADH46_2p_4100x.jpg"
+        img:"https://shop.fonelli.com/cdn/shop/files/CADH46_2p_4100x.jpg",
+        thumbnail:"https://shop.fonelli.com/cdn/shop/files/CADH46_2p_180x.jpg"
     },
 ]
 export const getProducts = ()=>{

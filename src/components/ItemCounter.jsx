@@ -18,11 +18,12 @@ const ItemCounter = ({stock, onAdd}) =>{
     }
     return (
         <div>
-            <div>
-                <button className="btn btn-danger" onClick={substract}>-</button>
+            <div className="btn-group" role="group">
+                <button className="btn btn-warning" onClick={substract}>&minus;</button>
                 <span className="btn">{count}</span>
-                <button className="btn btn-success" onClick={add}>+</button>
+                <button className="btn btn-success" onClick={add}>&#43;</button>
             </div>
+            <br/>
             <br/>
             <div className="d-grid gap-2">
                 <button className="btn btn-primary" disabled={stock===0 || count === 0} onClick={addToCart}>

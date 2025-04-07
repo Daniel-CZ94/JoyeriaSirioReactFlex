@@ -6,11 +6,11 @@ import CartEmpty from "./CartEmpty"
 const CartContainer = () =>{
     const {cart} = useCart()
     return(
-        <div className="container">
+        <>
             {
                 cart.length ? <CartView/> : <CartEmpty/>
             }
-        </div>
+        </>
     )
 
 }

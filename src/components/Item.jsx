@@ -21,7 +21,10 @@ const Item = ({producto}) => {
                     <div className="card-body">
                         <h5 className="card-title">{producto.nombre}</h5>                    
                         <p className="card-text"><NumericFormat value={producto.precio} displayType={'text'} thousandSeparator={true} prefix={'$'}></NumericFormat></p>
-                        <Link className="btn btn-primary" to={`/product/${producto.id}`}>Detalle</Link>
+                        <div className="d-grid gap-2">
+                            <Link className="btn btn-primary" to={`/product/${producto.id}`}>Detalle</Link>
+                        </div>
+                        
                     </div>
                 </div>
     )
