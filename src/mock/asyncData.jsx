@@ -1,6 +1,6 @@
-const productos = [
+export const productos = [
     {
-        id:"0011",
+        clave:"0011",
         nombre:"Anillo de compromiso de Oro 10k con Zirconia corazon",
         descripcion:"Anillo de compromiso de Oro 10k con Zirconia corazon",
         categoria:"Anillos",
@@ -10,7 +10,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/files/S82149211_2_180x.jpg"
     },
     {
-        id:"0012",
+        clave:"0012",
         nombre:"Anillo de compromiso de Oro 10k solitario",
         descripcion:"Anillo de compromiso de Oro 10k solitario",
         categoria:"Anillos",
@@ -20,7 +20,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/files/S82117414_180x.jpg"
     },
     {
-        id:"0013",
+        clave:"0013",
         nombre:"Anillo de compromiso de Oro 10k infinito",
         descripcion:"Anillo de compromiso de Oro 10k infinito",
         categoria:"Anillos",
@@ -30,7 +30,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/files/S82154971_180x.jpg"
     },
     {
-        id:"0014",
+        clave:"0014",
         nombre:"Anillo de compromiso de Oro 10k con Zirconia doble corazon",
         descripcion:"Anillo de compromiso de Oro 10k con Zirconia doble corazon",
         categoria:"Anillos",
@@ -40,7 +40,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/files/S82151012_180x.jpg"
     },
     {
-        id:"0015",
+        clave:"0015",
         nombre:"Churumbela de Oro 10k con Zirconia",
         descripcion:"Churumbela de Oro 10k con Zirconia",
         categoria:"Anillos",
@@ -50,7 +50,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/files/S82150174_180x.jpg"
     },
     {
-        id:"0016",
+        clave:"0016",
         nombre:"Churumbela de oro de 10k triple con Zirconia",
         descripcion:"Churumbela de oro de 10k triple con Zirconia",
         categoria:"Anillos",
@@ -60,7 +60,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/files/HJ723_180x.jpg"
     },
     {
-        id:"0017",
+        clave:"0017",
         nombre:"Anillo de compromiso churumbela de Oro 10k con Zirconia cuadrada",
         descripcion:"Anillo de compromiso churumbela de Oro 10k con Zirconia cuadrada",
         categoria:"Anillos",
@@ -70,7 +70,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/files/S82115887_180x.jpg"
     },
     {
-        id:"0018",
+        clave:"0018",
         nombre:"Anillo de compromiso de Oro 10k con Zirconia corona",
         descripcion:"Anillo de compromiso de Oro 10k con Zirconia corona",
         categoria:"Anillos",
@@ -80,7 +80,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/files/S82146856_180x.jpg"
     },
     {
-        id:"0021",
+        clave:"0021",
         nombre:"Argolla de Matrimonio Oro Amarillo 14k mateada",
         descripcion:"Argolla de Matrimonio Oro Amarillo 14k mateada 5mm",
         categoria:"Argollas",
@@ -90,7 +90,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/files/Argolla_de_Matrimonio_Oro_Amarillo_10k_5mm_AR10-060505_-1_180x.jpg"
     },
     {
-        id:"0022",
+        clave:"0022",
         nombre:"Argolla De Matrimonio Oro Amarillo 14K lisa",
         descripcion:"Argolla De Matrimonio Oro Amarillo 14K lisa 6mm Alianza III",
         categoria:"Argollas",
@@ -100,7 +100,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Amarillo_14K_6mm_Alianza_III_180x.png"
     },
     {
-        id:"0023",
+        clave:"0023",
         nombre:"Argolla De Matrimonio Oro Amarillo 14K Grecas",
         descripcion:"Argolla De Matrimonio Oro Amarillo 14K Grecas 6mm",
         categoria:"Argollas",
@@ -110,7 +110,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Amarillo_14K_6mm_AR14-02576H_180x.png"
     },
     {
-        id:"0024",
+        clave:"0024",
         nombre:"Argolla De Matrimonio Oro Amarillo 14k doble linea",
         descripcion:"Argolla De Matrimonio Oro Amarillo 14k doble linea 5mm Inspiración",
         categoria:"Argollas",
@@ -120,7 +120,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Amarillo_14k_5mm_Inspiraci_n_180x.png"
     },
     {
-        id:"0025",
+        clave:"0025",
         nombre:"Argolla de matrimonio de Oro Florentino 14K estrellas",
         descripcion:"Argolla de matrimonio de Oro Florentino estrellas 14K 6mm",
         categoria:"Argollas",
@@ -130,7 +130,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Amarillo_14k_5mm_Inspiraci_n_180x.png"
     },
     {
-        id:"0026",
+        clave:"0026",
         nombre:"Argolla De Matrimonio Oro Florentina 14K uvas",
         descripcion:"Argolla De Matrimonio Oro Florentina 14K 6mm uvas",
         categoria:"Argollas",
@@ -140,7 +140,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/products/Argolla_De_Matrimonio_Oro_Florentina_14K_6mm-1_180x.png"
     },
     {
-        id:"0027",
+        clave:"0027",
         nombre:"Argolla de Matrimonio Oro Amarillo y Blanco 14k",
         descripcion:"Argolla de Matrimonio Oro Amarillo y Blanco 14k 6mm",
         categoria:"Argollas",
@@ -150,7 +150,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/files/S79470469_180x.jpg"
     },
     {
-        id:"0028",
+        clave:"0028",
         nombre:"Argolla Oro Amarillo y Blanco 14k",
         descripcion:"Argolla Oro Amarillo y Blanco 14k 6mm",
         categoria:"Argollas",
@@ -160,7 +160,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/files/S79445082_180x.jpg"
     },
     {
-        id:"0031",
+        clave:"0031",
         nombre:"Pulsera de Oro Amarillo de 14k Troquelada",
         descripcion:"Pulsera de Oro Amarillo de 14k 4.2mm Troquelada",
         categoria:"Pulseras",
@@ -170,7 +170,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/files/S81601207_180x.jpg"
     },
     {
-        id:"0032",
+        clave:"0032",
         nombre:"Pulsera de Oro Amarillo de 14k Torsal",
         descripcion:"Pulsera de Oro Amarillo de 14k 4.2mm Torsal",
         categoria:"Pulseras",
@@ -180,7 +180,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/files/S81607936_180x.jpg"
     },
     {
-        id:"0033",
+        clave:"0033",
         nombre:"Pulsera de Oro Amarillo de 14k Cartier 1x1",
         descripcion:"Pulsera de Oro Amarillo de 14k Cartier 1x1",
         categoria:"Pulseras",
@@ -190,7 +190,7 @@ const productos = [
         thumbnail:"https://shop.fonelli.com/cdn/shop/files/S81606145_180x.jpg"
     },
     {
-        id:"0034",
+        clave:"0034",
         nombre:"Pulsera de Oro Amarillo de 14k Cartier 1x1 1mm",
         descripcion:"Pulsera de Oro Amarillo de 14k Cartier 1x1 eslavon largo",
         categoria:"Pulseras",
