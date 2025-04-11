@@ -7,6 +7,7 @@ import ItemDetailContainer from './components/ItemDetailContainer'
 import { CartProvider } from './context/CartContext'
 import CartContainer from './components/CartContainer'
 import FormDataClient from './components/FormDataClient'
+import PurchaseCompleted from './components/PurchaseCompleted'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       <Route path='/product/:id' element={<ItemDetailContainer/>}/>
       <Route path='/cart' element={<CartContainer/>}/>
       <Route path='/client' element={<FormDataClient/>}/>
+      <Route path='/ordencompleta' element={<PurchaseCompleted/>}/>
     </Routes>
     </CartProvider>   
     
