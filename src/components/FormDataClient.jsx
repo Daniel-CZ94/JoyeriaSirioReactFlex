@@ -1,25 +1,62 @@
 import React, { use, useState } from "react"
+import { useCart } from "../context/CartContext"
+import { useForm } from "react-hook-form"
+import { db } from "../service/firebase"
+import { addDoc, collection, getDoc, serverTimestamp, updateDoc } from "firebase/firestore"
 
 const FormDataClient = () => {
-    const [buyer,setBuyer] = useState({})
+    const [orderId,setOrderId] = useState('')
+    const {cart,totalCart,clearCart} = useCart()
+    const {register,handleSubmit, formState:{errors},getValues} = useForm()
+
+    const confirmarCompra = (dataForm) =>{
+        console.log(dataForm)
+        let compra = {
+            cliente:{
+                nombre: dataForm.nombre,
+                apellido: dataForm.apellido,
+                direccion: dataForm.direccion,
+                correoElectronico: dataForm.correoElectronico
+            },
+            compra:cart,
+            total:totalCart(),
+            fecha:serverTimestamp()
+        }
+        const ordenes = collection(db,"ordenes")
+        addDoc(ordenes,compra)
+        .then((res)=>{
+            /*cart.forEach((item)=>{
+                const docRef = doc(db,"productos",item,id)
+                getDoc(docRef)
+                .then((dbDoc)=>{
+                    updateDoc(docRef,{stock:dbDoc.data().stock - item.quantity})
+                })
+                .catch((error)=>console.log(error))
+            })*/
+           setOrderId(res.id)
+           clearCart()
+        })
+        .catch((error)=>console.log(error))
+
+    }
     return(
         <div className="container">
-            <form>
+            <form className="row g-3 needs-validation" onSubmit={handleSubmit(confirmarCompra)}>
                 <div className="mb-3">
                     <label className="form-label" htmlFor="inputName">Nombre</label>
-                    <input type="text" className="form-control" id="inputName" required></input>
+                    <input type="text" className="form-control" id="inputName" {...register("nombre",{required:true})} />
                 </div>
                 <div className="mb-3">
                     <label className="form-label" htmlFor="inputLastName">Apellidos</label>
-                    <input type="text" className="form-control" id="inputLastName" required></input>
+                    <input type="text" className="form-control" id="inputLastName" {...register("apellido",{required:true})}></input>
                 </div>
                 <div className="mb-3">
                     <label className="form-label" htmlFor="inputAddress">Direccion</label>
-                    <textarea className="form-control" id="inputAddress" rows="3" required/>
+                    <textarea className="form-control" id="inputAddress" rows="3" {...register("direccion",{required:true})}/>
                 </div>
                 <div className="mb-3">
                     <label className="form-label" htmlFor="inputMail">Correo electronico</label>
-                    <input type="email" className="form-control" id="inputMail" required></input>
+                    <input type="email" className="form-control" id="inputMail" {...register("correoElectronico",{required:true})}></input>
                 </div>
                 <div className="mb-3">
                     <label className="form-label" htmlFor="inputConfirmMail">Confirme su correo electronico</label>

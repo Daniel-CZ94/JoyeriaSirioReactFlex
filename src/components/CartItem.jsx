@@ -10,7 +10,7 @@ const CartItem = ({compra}) => {
             <td>
                 <img src={compra.thumbnail} className="img-thumbnail" alt="Sin imagen"/>
             </td>
-            <td>{compra.nombre}</td>
+            <td><h5>{compra.nombre}</h5></td>
             <td>
                 <NumericFormat value={compra.precio} displayType={'text'} thousandSeparator={true} prefix={'$'} decimalSeparator="." decimalScale={2}></NumericFormat>
             </td>

@@ -3,9 +3,8 @@ import { useState } from "react"
 import ItemList from "./ItemList"
 import ItemLoading from "./ItemLoading"
 import { useParams } from "react-router-dom"
-import { addDoc, collection, getDocs, query } from "firebase/firestore"
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "../service/firebase"
-import { productos } from "../mock/asyncData"
 
 const ItemListContainer = ({greeting}) => {
     const [data,setData] = useState([])
@@ -28,7 +27,7 @@ const ItemListContainer = ({greeting}) => {
     useEffect(()=>{
         setLoading(true)
         const productosCollection = category 
-        ? query(collection(db,"productos"),where("categoria","==",category.toLocaleLowerCase()))
+        ? query(collection(db,"productos"), where("categoria","==",category))
         : collection(db,"productos")
         getDocs(productosCollection)
         .then((res)=>{

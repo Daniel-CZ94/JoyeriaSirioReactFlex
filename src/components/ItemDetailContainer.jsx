@@ -35,8 +35,8 @@ const ItemDetailContainer = () =>{
     },[])
 
    if(invalid){
-    return <div>
-        <h2>El producto no existe</h2>
+    return <div className="alert alert-primary" role="alert">
+        El producto no existe
     </div>
    }
    return(
