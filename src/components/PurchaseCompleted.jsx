@@ -1,17 +1,18 @@
 import React from "react"
-import { Link, useLocation } from "react-router-dom"
+import { Link, Navigate, useLocation } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 
 const PurchaseCompleted = () =>{
     const navigation = useNavigate();
     const location = useLocation()
     return(
+        location.state ? 
         <div className="container text-center">
             <img src="./pago-exitoso.png" className="img-thumbnail" alt="Pago exitoso" height={400} width={400}/>
             <div className="row">&nbsp;</div>
             <div className="row">
                 <div className="alert alert-primary" role="alert">
-                    Su compra se ha realiza exitosamente con la clave: <b>{location.state.idcompra}</b>
+                    Su compra se ha realizado exitosamente con la clave: <b>{location.state.idcompra}</b>
                 </div>
                 <p>En los siguientes dias, su mercancia estara llegando a su hogar</p>            
             </div>
@@ -24,6 +25,8 @@ const PurchaseCompleted = () =>{
                         </Link>
             </div>
         </div>
+        :
+        <Navigate to="/" replace/>
     )
 }
 export default PurchaseCompleted

@@ -3,12 +3,16 @@ import { NumericFormat } from "react-number-format"
 import ItemCounter from "./ItemCounter"
 import { CartContext } from '../context/CartContext'
 const ItemDetail = ({product}) => {
-    const {addItem} = useContext(CartContext)
+    const {addItem,inCartExists} = useContext(CartContext)
+    const [inCart,setInCart] = useState(false)
 
     const onAdd = (quantity) =>{
         addItem(product,quantity)
-        console.log(product)
+        //console.log(product)
     }
+    /*const validateInCart = (id)=>{
+        return inCartExists(id)
+    }*/
     return (
         <div className="row" style={{justifyContent: "center",alignItems: "center"}}>
             <div className="col-lg-5">
@@ -19,7 +23,7 @@ const ItemDetail = ({product}) => {
                                 <p className="card-text"><em>{product.descripcion}</em></p>
                                 <p className="card-text">Existencias: {product.stock}</p>
                                 <p className="card-text">Precio: <NumericFormat value={product.precio} displayType={'text'} thousandSeparator={true} prefix={'$'} decimalSeparator="." decimalScale={2}></NumericFormat></p>
-                                <ItemCounter stock={product.stock} onAdd={onAdd} />
+                                <ItemCounter stock={product.stock} onAdd={onAdd} existsCart={inCartExists(product.id)} />
                             </div>
                         </div>
                     </div>

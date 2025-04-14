@@ -36,7 +36,9 @@ export const CartProvider = ({children}) => {
         setCart(cart.filter((prod) => prod.id !== id))
     }
     const inCartExists = (id) => {
-        return cart.some((prod) = prod.id === id)
+        console.log(id)
+        console.log(cart.some((prod) => prod.id === id))
+        return cart.some((prod) => prod.id === id)
     }
     const totalCart = () => {
         //console.log(cart.reduce((acc,prod) => (acc += prod.precio * prod.quantity),0))
