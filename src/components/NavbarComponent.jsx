@@ -20,19 +20,19 @@ const NavbarComponent = () => {
                             </li>*/
                         }
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/category/anillos">Anillos</NavLink>
+                            <NavLink className="nav-link" to="/category/Anillos">Anillos</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/category/argollas">Argollas</NavLink>
+                            <NavLink className="nav-link" to="/category/Argollas">Argollas</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/category/pulseras">Pulseras</NavLink>
+                            <NavLink className="nav-link" to="/category/Pulseras">Pulseras</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/category/relojes">Relojes</NavLink>
+                            <NavLink className="nav-link" to="/category/Relojes">Relojes</NavLink>
                         </li>
                     </ul>
-                    <CartWidgetComponent/>
+                    <NavLink to='/cart'><CartWidgetComponent/></NavLink>
                 </div>
             </div>
         </nav>
