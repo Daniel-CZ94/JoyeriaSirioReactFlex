@@ -3,19 +3,16 @@ import { useCart } from "../context/CartContext"
 import { useForm } from "react-hook-form"
 import { db } from "../service/firebase"
 import { addDoc, collection, getDoc, serverTimestamp, updateDoc } from "firebase/firestore"
-import { useNavigate } from "react-router-dom"
+import { useNavigate,Navigate } from "react-router-dom"
 
 const FormDataClient = () => {
     const [orderId,setOrderId] = useState('')
-    const {cart,totalCart,clearCart} = useCart()
-    const {register,handleSubmit, formState:{errors},getValues} = useForm()
+    const {cart,totalCart,clearCart,totalItems} = useCart()
+    const {register,handleSubmit, formState:{errors}} = useForm()
     const navigate = useNavigate()
 
 
-    const confirmarCompra = (dataForm) =>{
-        //console.log(dataForm)
-        
-        //navigate("/")
+    const confirmarCompra = (dataForm) =>{   
         let compra = {
             cliente:{
                 nombre: dataForm.nombre,
@@ -47,31 +44,39 @@ const FormDataClient = () => {
         
     }
     return(
+        totalItems() > 0 || orderId !== '' ?
         <div className="container">
             <form className="row g-3 needs-validation" onSubmit={handleSubmit(confirmarCompra)}>
                 <div className="mb-3">
-                    <label className="form-label" htmlFor="inputName">Nombre</label>
-                    <input type="text" className="form-control" id="inputName" {...register("nombre",{required:true})} />
+                    <label className="form-label" htmlFor="nombre">Nombre</label>
+                    <input type="text" className="form-control" name="nombre" {...register("nombre",{required:true})} />
+                    {errors?.nombre?.type === "required" && <span style={{color:'red'}}>Por favor completa este campo</span>}
                 </div>
                 <div className="mb-3">
-                    <label className="form-label" htmlFor="inputLastName">Apellidos</label>
-                    <input type="text" className="form-control" id="inputLastName" {...register("apellido",{required:true})}></input>
+                    <label className="form-label" htmlFor="apellido">Apellidos</label>
+                    <input type="text" className="form-control" name="apellido" {...register("apellido",{required:true})}></input>
+                    {errors?.apellido?.type === "required" && <span style={{color:'red'}}>Por favor completa este campo</span>}
                 </div>
                 <div className="mb-3">
-                    <label className="form-label" htmlFor="inputAddress">Direccion</label>
-                    <textarea className="form-control" id="inputAddress" rows="3" {...register("direccion",{required:true})}/>
+                    <label className="form-label" htmlFor="direccion">Direccion</label>
+                    <textarea className="form-control" name="direccion" rows="3" {...register("direccion",{required:true})}/>
+                    {errors?.direccion?.type === "required" && <span style={{color:'red'}}>Por favor completa este campo</span>}
                 </div>
                 <div className="mb-3">
-                    <label className="form-label" htmlFor="inputMail">Correo electronico</label>
-                    <input type="email" className="form-control" id="inputMail" {...register("correoElectronico",{required:true})}></input>
+                    <label className="form-label" htmlFor="correoElectronico">Correo electronico</label>
+                    <input type="email" className="form-control" name="correoElectronico" {...register("correoElectronico",{required:true})}></input>
+                    {errors?.correoElectronico?.type === "required" && <span style={{color:'red'}}>Por favor completa este campo</span>}
                 </div>
                 <div className="mb-3">
-                    <label className="form-label" htmlFor="inputConfirmMail">Confirme su correo electronico</label>
-                    <input type="email" className="form-control" id="inputConfirmMail" required></input>
+                    <label className="form-label" htmlFor="confirmMail">Confirme su correo electronico</label>
+                    <input type="email" className="form-control" name="confirmMail"  {...register("confirmMail",{required:true})}></input>
+                    {errors?.confirmMail?.type === "required" && <span style={{color:'red'}}>Por favor completa este campo</span>}
                 </div>
                 <button type="submit" className="btn btn-primary">Finalizar compra</button>
             </form>
         </div>
+        :
+        <Navigate to="/cart" replace/>
     )
 }
 export default FormDataClient

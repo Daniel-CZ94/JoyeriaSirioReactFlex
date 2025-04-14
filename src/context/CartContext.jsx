@@ -13,7 +13,6 @@ export const CartProvider = ({children}) => {
                     if(amount < prod.stock){
                         return {...prod,quantity: amount}
                     }else{
-                        console.log("La cantidad supera el stock")
                         return {...prod,quantity: prod.stock}                        
                     }
                     
@@ -25,9 +24,6 @@ export const CartProvider = ({children}) => {
         }else{
             setCart([...cart,{...item,quantity}])
         }
-        
-        //cart.map((compra)=> console.log(compra))
-        //printCart(cart)
     }
     const clearCart = () => {
         setCart([])
@@ -36,18 +32,10 @@ export const CartProvider = ({children}) => {
         setCart(cart.filter((prod) => prod.id !== id))
     }
     const inCartExists = (id) => {
-        console.log(id)
-        console.log(cart.some((prod) => prod.id === id))
         return cart.some((prod) => prod.id === id)
     }
     const totalCart = () => {
-        //console.log(cart.reduce((acc,prod) => (acc += prod.precio * prod.quantity),0))
         return cart.reduce((acc,prod) => (acc += prod.precio * prod.quantity),0)
-        /*let  total = 0;
-        for(let i = 0;i<cart.length;i++){
-            console.log(cart[i].quantity)
-        }
-        return total;*/
     }
     const totalItems = () => {
         //return cart.reduce((acc,prod) => acc += prod.quantity,0)

@@ -8,11 +8,7 @@ const ItemDetail = ({product}) => {
 
     const onAdd = (quantity) =>{
         addItem(product,quantity)
-        //console.log(product)
     }
-    /*const validateInCart = (id)=>{
-        return inCartExists(id)
-    }*/
     return (
         <div className="row" style={{justifyContent: "center",alignItems: "center"}}>
             <div className="col-lg-5">
@@ -23,7 +19,13 @@ const ItemDetail = ({product}) => {
                                 <p className="card-text"><em>{product.descripcion}</em></p>
                                 <p className="card-text">Existencias: {product.stock}</p>
                                 <p className="card-text">Precio: <NumericFormat value={product.precio} displayType={'text'} thousandSeparator={true} prefix={'$'} decimalSeparator="." decimalScale={2}></NumericFormat></p>
-                                <ItemCounter stock={product.stock} onAdd={onAdd} existsCart={inCartExists(product.id)} />
+                                { 
+                                product.stock > 0 
+                                ? <ItemCounter stock={product.stock} onAdd={onAdd} existsCart={inCartExists(product.id)} /> 
+                                :  <div className="alert alert-danger" role="alert">
+                                        Producto no disponible
+                                    </div>
+                                } 
                             </div>
                         </div>
                     </div>
